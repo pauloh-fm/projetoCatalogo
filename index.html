@@ -1,12 +1,311 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    
+
+<nav class="navbar navbar-light fixed-top shadow p-3 mb-6 bg-white">
+    <button class="btn btn-success" onclick="enviarCarrinhoWhatsApp()">Solicitar cotação</button>
+</nav>
+<br><br>
+<div class="row p-3" style="background-color: #fff;">
+  
+  <div class="col-md-1 p-3"><div>
+    <img src="/public/images/bandeirantesLogo.jpg" width="85" height="85">
+  </div></div>
+  <div class="col-md-11 p-3 pt-4">
+    <h4 style="color:#333">Gráfica Bandeirantes</h4>
+    <h4 style="color:#8C8C8C">Nossos Produtos</h4>
+  </div>
+</div>
+
+
+    <div id="accordion">
+
+       <div class="card">
+          
+          <div class="card-header" id="headingOne" style="background-color: #17A2B8;">
+            <h5 class="mb-0">
+              <button class="btn btn-info" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="font-size:110%">
+                Cartões de visita
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="public/images/cartaodeVisitaModelo.jpg" alt="Caderno"class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Verniz Frente e Verso</h5>
+                  <p style="font-size:80%;">Verniz Frente e Verso (500 unidades)</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="cartao1" value="0" />
+                  </p>
+                </div>
+              </div> 
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="public/images/cartaodeVisitaModelo.jpg" alt="Verniz Frente"class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Verniz Frente</h5>
+                  <p style="font-size:80%;">Verniz Frente (500 unidades)</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="cartao2" size="10" value="0" /></p>
+                </div>
+              </div> 
+            </div>
+
+
+          </div>
+        
+        <div class="card">
+          
+          <div class="card-header" id="headingTwo" style="background-color: #17A2B8;">
+            <h5 class="mb-0">
+              <button class="btn btn-info collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"  style="font-size:110%">
+                Banner
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+
+                  <img src="public/images/modeloBanner.jpg" alt="Banner - 0,90m x 1,20m" class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Banner - 0,90m x 1,20m</h5>
+                  <p style="font-size:80%;">Banner - 0,90m x 1,20m</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="banner1" value="0" /></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="public/images/modeloBanner.jpg" alt="Banner -0,80m x 1,20m" class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Banner - 0,80m x 1,20m</h5>
+                  <p style="font-size:80%;">Descrição do Banner - 0,80m x 1,20m</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="banner2" value="0" /></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="public/images/modeloBanner.jpg" alt="Banner - 2m x 2m" class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Banner - 2m x 2m</h5>
+                  <p style="font-size:80%;">Banner - 2m x 2m</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="banner3" value="0" />
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="public/images/modeloBanner.jpg" alt="Banner - 1,50m x 1,50m" class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Banner - 1,50m x 1,50m</h5>
+                  <p style="font-size:80%;">Banner - 1,50m x 1,50m</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="banner4" value="0" />
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="public/images/modeloBanner.jpg" alt="Banner - 1,10m x 1,20m" class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Banner - 1,10m x 1,20m</h5>
+                  <p style="font-size:80%;">Banner - 1,10m x 1,20m</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="banner5" value="0" />
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card">
+          
+          <div class="card-header" id="headingThree" style="background-color: #17A2B8;">
+            <h5 class="mb-0">
+              <button class="btn btn-info collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"  style="font-size:110%">
+                IMPRESSÃO DIGITAL RÁPIDA
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+
+                  <img src="public/images/a4Modelo.jpg" alt="Tamanho A4 - papel couchê" class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Tamanho A4 - papel couchê</h5>
+                  <p style="font-size:80%;">Tamanho A4 - papel couchê</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="impressao1" value="0" /></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="public/images/a4Modelo.jpg" alt="Tamanho A4 - papel Ofício" class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Tamanho A4 - papel Ofício</h5>
+                  <p style="font-size:80%;">Descrição do Tamanho A4 - papel Ofício</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="impressao2" value="0" /></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="public/images/a3Modelo.jpg" alt="Tamanho A3 - papel couchê" class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Tamanho A3 - papel couchê</h5>
+                  <p style="font-size:80%;">Tamanho A3 - papel couchê</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="impressao3" value="0" />
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="public/images/a3Modelo.jpg" alt="Tamanho A3 - papel Ofício" class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Tamanho A3 - papel Ofício</h5>
+                  <p style="font-size:80%;">Tamanho A3 - papel Ofício</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="impressao4" value="0" />
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="card">
+          
+          <div class="card-header" id="headingFour" style="background-color: #17A2B8;">
+            <h5 class="mb-0">
+              <button class="btn btn-info collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"  style="font-size:110%">
+                ADESIVO AUTOMOTIVO
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+
+                  <img src="public/images/modeloVeiculo.jpg" alt="Adesivo blackout" class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Adesivo blackout</h5>
+                  <p style="font-size:80%;">Adesivo blackout</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="adesivo1" value="0" /></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-1">
+                  <img src="public/images/modeloVeiculo.jpg" alt="Adesivo Perfurado" class="img-fluid"/>
+                </div>
+                <div class="col-md-11">
+                  <h5>Adesivo Perfurado</h5>
+                  <p style="font-size:80%;">Adesivo Perfurado</p>
+                  <p style="font-size:80%;">Quantidade: <input min="0" type="number" id="adesivo2" value="0" /></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+       </div>
+     </div>
+
+  
+
+
+<script>
+  function enviarCarrinhoWhatsApp() {
+    var itens = [
+      {nome: "Cartões de Visita - Verniz Frente e Verso 500 unidades", id: "cartao1"},
+      {nome: "Cartões de Visita - Verniz Frente e Verso 500 unidades", id: "cartao2"},
+      {nome: "Banner - 0,90m x 1,20m", id: "banner1"},
+      {nome: "Banner - 0,80m x 1,20m", id: "banner2"},
+      {nome: "Banner - 2m x 2m", id: "banner3"},
+      {nome: "Banner -  1,50m x 1,50m", id: "banner4"},
+      {nome: "Banner -  1,10m x 1,20m", id: "banner5"},
+      {nome: "Tamanho A4 - papel couchê", id: "impressao1"},
+      {nome: "Tamanho A4 papel Ofício", id: "impressao2"},
+      {nome: "Tamanho A3 papel couchê", id: "impressao3"},
+      {nome: "Tamanho A3 papel Ofício", id: "impressao4"},
+      {nome: "Adesivo Blackout", id: "adesivo1"},
+      {nome: "Adesivo Perfurado", id: "adesivo2"},
+      // Adicione quantos produtos precisar aqui
+    ];
+    var mensagem = "_*COTAÇÃO*_\n\n";
+    var total = 0;
+    for (var i = 0; i < itens.length; i++) {
+      var quantidade = parseInt(document.getElementById(itens[i].id).value);
+      var subtotal = quantidade;
+      if (quantidade > 0) {
+        mensagem += "*"+itens[i].nome+"*"+ "\n" + "Quant: " + quantidade + "\n"+ "\n";
+        total += subtotal;
+      }
+    }
+    if (total > 0) {
+      window.location.href ="https://api.whatsapp.com/send?phone=5574981483054&text=" + encodeURIComponent(mensagem)+"\n"+ "👆🏽Por favor, me envie essa cotação.";
+    } else {
+      alert("Nenhum item selecionado");
+    }
+  }
+</script>
+  </div>
 </body>
 </html>
